@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "NewFont";
+    src: url("./../INSULA__.ttf");
+    }
+@font-face {
+    font-family: "ChapterFont";
+    src: url("./../FR_KMS_01cs.ttf");
+    }
+body{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 727px; /*WYSI*/
+    padding-left: 13px;
+    padding-right: 13px;
+
+}
+html {
+    background-color: #184e77;
+    color : #d0efb1;
+    font-family: "NewFont";
+    font-size: larger;
+}
+
+h1 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+h2 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+h3 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
