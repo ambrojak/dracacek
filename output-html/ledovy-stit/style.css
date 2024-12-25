@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: "ChapterFont";
+    src: url("FR_KMS_01cs.ttf");
+    }
+@font-face {
+    font-family: "CustomFont";
+    src: url("Hilds___.ttf");
+    }
+@font-face {
+    font-family: "BetaFont";
+    src: url("RINGM___.TTF");
+    }
+@font-face {
+    font-family: "NewFont";
+    src: url("INSULA__.ttf");
+    }
+body {
+    font-family: 'CustomFont', Arial, sans-serif;
+    background-color: #cf931b;
+    background-image: url("clean-gray-paper.png");
+    background-repeat: repeat;
+}
+p {
+    font-size:150%;
+}
+h1 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+h2 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+h3 {
+    font-family: 'ChapterFont', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+
+.Beta {
+    font-family: 'BetaFont', Arial, sans-serif;
+    font-size: 60%;
+}
