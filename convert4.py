@@ -27,13 +27,14 @@ HTML_TEMPLATE = Template("""
     <link rel="stylesheet" href="{{ css_file }}">
 </head>
 <body>
+    <h1>Sezení {{ title }} </h1>
     <div class="content">
-        <pre>{{ content }}</pre>
+        <p>{{ content }}</p>
     </div>
     <div class="navigation">
-        {% if prev_file %}<a href="{{ prev_file }}">Previous</a>{% endif %}
-        {% if next_file %}<a href="{{ next_file }}">Next</a>{% endif %}
+        <a href="{% if prev_file %}{{ prev_file }}{% endif %}">Previous</a>
         <a href="index.html">Index</a>
+        <a href="{% if next_file %}{{ next_file }}{% endif %}">Next</a>
     </div>
 </body>
 </html>
@@ -56,7 +57,7 @@ INDEX_TEMPLATE = Template("""
         <li><a href="{{ file.link }}">{{ file.title }}</a></li>
         {% endfor %}
     </ul>
-    {% if parent_index %}<a href="{{ parent_index }}">Back to parent index</a>{% endif %}
+    {% if parent_index %}<a class="backlink" href="{{ parent_index }}">Back to parent index</a>{% endif %}
 </body>
 </html>
 """)
@@ -77,7 +78,7 @@ def convert_txt_to_html():
 
     for txt_file in txt_files:
         with open(txt_file, "r", encoding="utf-8") as f:
-            content = f.read()
+            content = f.read().replace('\n','<br>')
 
         title = txt_file.stem
         relative_path = txt_file.relative_to(SRC_DIR)
@@ -144,7 +145,7 @@ def generate_indexes(html_files):
 
     with open(top_index_file, "w", encoding="utf-8") as f:
         f.write(INDEX_TEMPLATE.render(
-            title="Top Index",
+            title="Naše dračáky",
             files=subfolder_links,
             parent_index=None,
             css_file=CSS_FILE_BASE,
