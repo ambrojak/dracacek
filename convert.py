@@ -4,7 +4,7 @@ from jinja2 import Template
 
 # Directory with your txt files and output HTML folder
 SRC_DIR = "src-texts"
-OUTPUT_DIR = "html-files"
+OUTPUT_DIR = "docs"
 CSS_FILE_BASE = "../styles/style.css"
 
 def get_css_file_for_path(relative_path):
@@ -155,4 +155,4 @@ def generate_indexes(html_files):
 if __name__ == "__main__":
     html_files = convert_txt_to_html()
     generate_indexes(html_files)
-    print("Conversion complete. HTML files are in the 'html-files' folder.")
+    print("Conversion complete. HTML files are in the 'docs' folder.")
